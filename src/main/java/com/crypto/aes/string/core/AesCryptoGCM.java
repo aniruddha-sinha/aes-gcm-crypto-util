@@ -35,6 +35,7 @@ public class AesCryptoGCM {
 	public static byte[] getRandomNonce(int numBytes) {
 		byte[] nonce = new byte[numBytes];
 		new SecureRandom().nextBytes(nonce);
+
 		return nonce;
 	}
 
@@ -52,7 +53,7 @@ public class AesCryptoGCM {
 
 		return generatedKey;
 	}
-	
+
 	// AES-GCM needs GCMParameterSpec
 	private static byte[] encrypt(byte[] pText, SecretKey secret, byte[] iv)
 			throws NoSuchAlgorithmException, InvalidKeyException, InvalidAlgorithmParameterException,

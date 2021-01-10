@@ -1,6 +1,6 @@
-package com.crypto.aes.string;
+package com.crypto.aes.password;
 
-import com.crypto.aes.string.core.AES;
+import com.crypto.aes.password.core.AES;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("Decrypted Text " + decryptedText);
 
 		System.out.println("is plain == decrypted ?? " + plainText.equalsIgnoreCase(decryptedText));
-		
+
 		long timeEnd = System.currentTimeMillis();
 
 		System.err.println((timeEnd - timeStart) / 1000.0 + " seconds");
