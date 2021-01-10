@@ -1,4 +1,4 @@
-package com.crypto.aes.string;
+package com.crypto.aes.string.core;
 
 import java.nio.ByteBuffer;
 import java.security.InvalidAlgorithmParameterException;

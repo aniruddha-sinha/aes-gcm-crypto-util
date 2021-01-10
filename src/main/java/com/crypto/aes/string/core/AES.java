@@ -1,4 +1,4 @@
-package com.crypto.aes.string;
+package com.crypto.aes.string.core;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;

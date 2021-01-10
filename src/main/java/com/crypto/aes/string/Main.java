@@ -1,5 +1,7 @@
 package com.crypto.aes.string;
 
+import com.crypto.aes.string.core.AES;
+
 public class Main {
 	public static void main(String[] args) throws Exception {
 		String plainText = "This /is/a/plain/text... consists special chars and backslashes \\ \\ \\ \\ ";
