@@ -4,20 +4,18 @@ import com.crypto.aes.string.core.AES;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
-		String plainText = "This /is/a/plain/text... consists special chars and backslashes \\ \\ \\ \\ ";
+		String plainText = "This /is/a/plain/text... consists special chars and backslashes \\ \\ \\ \\; I can put the string however I want; this simply works!!!! ";
 		System.out.println("PlainText " + plainText);
-		
+
 		String encryptedText = AES.encrypt(plainText);
 		System.out.println("Encrypted Text " + encryptedText);
 		System.out.println("Encrypted Text Length  " + encryptedText.length());
-		
-		
+
 		System.out.println("\n\n\n");
-		
+
 		String decryptedText = AES.decrypt(encryptedText);
-		System.out.println("Decrypted Text "+ decryptedText);
-		
-		
-		System.out.println("is plain == decrypted ?? " + plainText.equalsIgnoreCase(decryptedText) );
+		System.out.println("Decrypted Text " + decryptedText);
+
+		System.out.println("is plain == decrypted ?? " + plainText.equalsIgnoreCase(decryptedText));
 	}
 }
