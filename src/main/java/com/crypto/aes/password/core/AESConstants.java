@@ -15,6 +15,23 @@ public class AESConstants {
 	public static final Charset UTF_8 = StandardCharsets.UTF_8;
 	public static final String SECRET_KEY_TRANSFORMATION_ALGORITHM = "PBKDF2WithHmacSHA256";
 	public static final String KEY_GEN_INSTANCE_NAME = "AES";
+	public static final int AES_KEY_BIT = 256;
+	
+	/**
+	 * the higher the number of iteration
+	 * the lower the efficiency
+	 * 
+	 * ITERATION COUNT ::: 65536
+	 * enc time : 0.788 seconds
+	 * dec time: 0.118 seconds
+	 * 
+	 * 
+	 * ITERATION COUNT ::: 2000
+	 * enc time: 0.476 seconds
+	 * dec time: 0.044 seconds
+	 */
+	
+	public static final int ITERATION_COUNT = 65536; //2000;//65536;
 	
 	public static final String PASSWORD = "GPNframework9";
 }

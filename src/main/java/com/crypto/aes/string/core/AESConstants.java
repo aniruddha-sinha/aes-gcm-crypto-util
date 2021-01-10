@@ -19,8 +19,6 @@ public class AESConstants {
 		public static final String KEY_GEN_INSTANCE_NAME = "AES";
 
 		public static final int AES_KEY_BIT = 256;
-
-		public static final int ITERATION_COUNT = 65536;
 		
 		public static final int IV_LENGTH_BYTE = 96;
 

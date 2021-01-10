@@ -21,7 +21,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class AESCryptoGCMPkcs {
 	private AESCryptoGCMPkcs() {
-		
+
 	}
 
 	public static byte[] getRandomNonce(int numBytes) {
@@ -35,9 +35,7 @@ public class AESCryptoGCMPkcs {
 			throws NoSuchAlgorithmException, InvalidKeySpecException {
 
 		SecretKeyFactory factory = SecretKeyFactory.getInstance(AESConstants.SECRET_KEY_TRANSFORMATION_ALGORITHM);
-		// iterationCount = 65536
-		// keyLength = 256
-		KeySpec spec = new PBEKeySpec(password, salt, 65536, 256);
+		KeySpec spec = new PBEKeySpec(password, salt, AESConstants.ITERATION_COUNT, AESConstants.AES_KEY_BIT);
 		return new SecretKeySpec(factory.generateSecret(spec).getEncoded(), AESConstants.KEY_GEN_INSTANCE_NAME);
 
 	}
